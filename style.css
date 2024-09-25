@@ -1,0 +1,107 @@
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 20px;
+}
+
+.input-container {
+  margin-bottom: 20px;
+}
+
+#building {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  max-width: 600px; 
+  border: 2px solid #333;
+  margin-top: 20px;
+}
+
+.floor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  border-top: 1px solid #ccc;
+  height: 100px;
+  padding: 0 10px;
+  position: relative;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-right: 10px; 
+}
+
+.lift-container {
+  display: flex; 
+  align-items: flex-end; 
+  justify-content: space-between; 
+  flex-grow: 1;
+  position: relative;
+  height: 100%; 
+  padding: 0 20px; 
+}
+
+.lift {
+  width: 50px;
+  height: 60px;
+  background-color: #888;
+  position: absolute;
+  bottom: 0; 
+  transition: transform 2s; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px; 
+}
+
+
+.door {
+  width: 50%;
+  height: 100%;
+  background-color: #666;
+  position: absolute;
+  transition: width 2.5s; 
+}
+
+.door.left {
+  left: 0;
+}
+
+.door.right {
+  right: 0;
+}
+
+.button {
+  z-index: 10; 
+  width: 50px;
+  height: 30px;
+  font-size: 12px;
+}
+
+@media(max-width: 600px) {
+  #building {
+    max-width: 100%;
+  }
+
+  .floor {
+    height: 80px;
+  }
+
+  .lift {
+    width: 30px;
+    height: 40px;
+  }
+
+  .button {
+    width: 40px;
+    height: 25px;
+  }
+}
